@@ -15,8 +15,8 @@ import java.util.List;
 public class StudentController {
     private StudentService studentService;
     @GetMapping
-    public ResponseEntity<List<StudentDTO>> findAll(){
-        return ResponseEntity.ok(studentService.findAllStudents());
+    public List<StudentDTO> findAll(){
+        return studentService.findAllStudents();
     }
     @PostMapping
     public void createStudent(@RequestBody StudentDTO studentDTO){
@@ -31,7 +31,7 @@ public class StudentController {
         studentService.deleteStudent(id);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<StudentDTO> findStudentById(@PathVariable Integer id){
-        return ResponseEntity.ok(studentService.findStudentById(id));
+    public StudentDTO findStudentById(@PathVariable Integer id){
+        return studentService.findStudentById(id);
     }
 }
