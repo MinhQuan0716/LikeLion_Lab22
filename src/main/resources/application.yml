@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: lab22
+  datasource:
+    url: jdbc:mysql://localhost:3306/student_management?useSSL=false
+    username: root
+    password: Admin@0611
+  jpa:
+    hibernate:
+      ddl_auto: none
+    showsql: true
+    format-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
